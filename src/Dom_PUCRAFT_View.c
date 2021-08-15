@@ -2,38 +2,39 @@
 #include <conio.h>
 #include <stdlib.h>
 
-#include "dominoView.h"
-#include "dominoController.h"
-#include "dominoModel.h"
+#include "Dom_PUCRAFT_View.h"
+#include "Dom_PUCRAFT_Controller.h"
+#include "Dom_PUCRAFT_Model.h"
 
 void mostraPecas(int lado1,int lado2)
 {
     int l;
 
-    for(int l=1;l<=28;l++)
+    for(l=1;l<=28;l++)
     {
-    printf("Peca %d: %d/%d\n",l,pecasDomino[l].lado1,pecasDomino[l].lado2);
+    printf("|%d/%d| ",pecasDomino[l].lado1,pecasDomino[l].lado2);
     }
+    printf("\n");
 }
 
 int menu(int escolha)
 {
-	printf("#################################################\n");
-	printf("#     _                  _          		#\n");
-	printf("#    | |                (_)                	#\n");
-	printf("#  __| |  ___  _ __ ___  _ _ __   ___  	 	#\n");
-	printf("# / _` | / _ \\| '_ ` _ \\| | '_ \\ / _ \\	 	#\n");
-	printf("# |(_| |  (_) | | | | | | | | | | (_) |	 	#\n");
-	printf("# \\__,_| \\___/|_| |_| |_|_|_| |_|\\___/   	#\n");
-	printf("#						#\n");
-	printf("#	1) Iniciar novo Jogo			#\n");
-	printf("#	2) Continuar a Jogar			#\n");
-	printf("#	3) Salvar Jogo				#\n");
-	printf("#	4) Carregar Jogo			#\n");
-	printf("#	5) Regras do Jogo			#\n");
-	printf("#	6) Sair do Jogo				#\n");
-	printf("#	7) Creditos				#\n");
-	printf("#################################################\n");
+	printf("    #################################################\n");
+	printf("    #     _                  _            _	    #\n");
+	printf("    #    | |                (_)         /_/         #\n");
+	printf("    #  __| |  ___  _ __ ___  _ _ __ ___ _	    #\n");
+	printf("    # / _` | / _ \\| '_ ` _ \\| | '_ \\ / _ \\	    #\n");
+	printf("    # |(_| |  (_) | | | | | | | | | | (_) |	    #\n");
+	printf("    # \\__,_| \\___/|_| |_| |_|_|_| |_|\\___/          #\n");
+	printf("    #						    #\n");
+	printf("    #	1) Iniciar novo Jogo			    #\n");
+	printf("    #	2) Continuar a Jogar			    #\n");
+	printf("    #	3) Salvar Jogo				    #\n");
+	printf("    #	4) Carregar Jogo			    #\n");
+	printf("    #	5) Regras do Jogo			    #\n");
+	printf("    #	6) Sair do Jogo				    #\n");
+	printf("    #	7) Creditos				    #\n");
+	printf("    #################################################\n");
 
 	scanf("%d",&escolha);
 
@@ -81,4 +82,27 @@ void creditos()
 void qualOpcao()
 {
     printf("\nQual opcao voce deseja fazer: nao embaralhas(0) ou embaralhar(1), para caso queira voltar ao menu digite(2)\n");
+}
+
+void mostrarMao1()
+{
+    int i;
+    printf("\nMao jogador 1:\n");
+
+    for(i=1;i<=7;i++)
+    {
+        printf("|%d/%d|\n",pecasDomino[i].mao1,pecasDomino[i].mao11);
+    }
+}
+
+void mostrarMao2()
+{
+    int j;
+
+    printf("\nMao jogador 2:\n");
+
+    for(j=8;j<=14;j++)
+    {
+        printf("|%d/%d|\n",pecasDomino[j].mao2,pecasDomino[j].mao22);
+    }
 }

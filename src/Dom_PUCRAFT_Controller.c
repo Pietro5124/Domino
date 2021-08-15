@@ -2,14 +2,14 @@
 #include <conio.h>
 #include <stdlib.h>
 
-#include "dominoView.h"
-#include "dominoController.h"
-#include "dominoModel.h"
+#include "Dom_PUCRAFT_View.h"
+#include "Dom_PUCRAFT_Controller.h"
+#include "Dom_PUCRAFT_Model.h"
 
 void opcoesMenu()
 {
-    int escolha,SimNao[1];
-    int lado1,lado2;
+    int escolha,SimNao[3],jogo;
+    int lado1,lado2,mao1,mao2;
     char status;
 
     while(escolha != 6)
@@ -34,7 +34,16 @@ void opcoesMenu()
 
         case 1: embaralhaPeca(pecasDomino,aux);
                 mostraPecas(lado1,lado2);
-                break;
+
+                jogo = 1;
+
+                if(jogo == 1)
+                {
+                    comprar();
+                    mostrarMao1();
+                    mostrarMao2();
+                }
+
         case 2: escolha = 8;
 
         default:break;
