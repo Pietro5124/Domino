@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
+#include <time.h>
 
 #include "dominoView.h"
 #include "dominoController.h"
@@ -43,7 +44,7 @@ int opcoesEmbaralhaOuArrumar(int SimNao[])
     qualOpcao();
     scanf("%d",&SimNao[0]);
 
-    return SimNao;
+    return SimNao[0];
 }
 
 void comprar()
