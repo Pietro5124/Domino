@@ -53,17 +53,17 @@ void comprar()
 
     for(i=1; i <= 7;i++)
     {
-        pecasDomino[i].mao1 = pecasDomino[i].lado1;
+        pecasDomino[i].mao1esquerdo = pecasDomino[i].lado1;
 
-        pecasDomino[i].mao11 = pecasDomino[i].lado2;
+        pecasDomino[i].mao1direito = pecasDomino[i].lado2;
 
         pecasDomino[i].status = 1;
     }
 
     for(j=8; j <= 14;j++)
     {
-        pecasDomino[j-7].mao2 = pecasDomino[j].lado1;
-        pecasDomino[j-7].mao22 = pecasDomino[j].lado2;
+        pecasDomino[j-7].mao2esquerdo = pecasDomino[j].lado1;
+        pecasDomino[j-7].mao2direito = pecasDomino[j].lado2;
 
         pecasDomino[j].status = 2;
     }

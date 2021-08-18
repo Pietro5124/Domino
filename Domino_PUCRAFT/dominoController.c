@@ -16,7 +16,7 @@ void opcoesMenu()
     {
     if(escolha != 1)
     {
-    escolha = menu(escolha);
+        escolha = menu(escolha);
     }
 
 	switch(escolha)

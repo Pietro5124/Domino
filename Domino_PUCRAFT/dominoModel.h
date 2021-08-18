@@ -9,7 +9,7 @@ typedef struct peca{
 
     int lado1,lado2;
     int status;
-    int mao1,mao11,mao2,mao22;
+    int mao1esquerdo,mao1direito,mao2esquerdo,mao2direito;
 
 }pecas;
 
