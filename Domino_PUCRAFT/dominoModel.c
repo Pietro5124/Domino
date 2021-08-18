@@ -51,24 +51,35 @@ void comprar()
 {
     int i,j;
 
-    for(i=1; i <= 7;i++)
+    for(i=1; i <=28;i++)
     {
-        pecasDomino[i].mao1esquerdo = pecasDomino[i].lado1;
+        if(i<=7)
+        {
+            pecasDomino[i].status = 1;
+        }
+        if(i>=8 && i<=14)
+        {
+            pecasDomino[i].status = 2;
+        }
+        if(i>14)
+        {
+            pecasDomino[i].status = 3;
+        }
 
-        pecasDomino[i].mao1direito = pecasDomino[i].lado2;
-
-        pecasDomino[i].status = 1;
-    }
-
-    for(j=8; j <= 14;j++)
-    {
-        pecasDomino[j-7].mao2esquerdo = pecasDomino[j].lado1;
-        pecasDomino[j-7].mao2direito = pecasDomino[j].lado2;
-
-        pecasDomino[j].status = 2;
     }
 }
-
+int definircomeco()
+{
+        int maior=0;
+        for(int i=1; i <=28;i++)
+        {
+            if ((pecasDomino[i].status!=3)&&(pecasDomino[i].lado1==pecasDomino[i].lado2)&&(maior<pecasDomino[i].lado1))
+            {
+               maior=i;
+            }
+        }
+        return(pecasDomino[maior].status);
+}
 int jogar1(int peca1)
 {
 

@@ -10,8 +10,7 @@ int menu(int escolha);
 void regras();
 void creditos();
 void qualOpcao();
-void mostrarMao1();
-void mostrarMao2();
-void apresentaMesa(int peca1,int peca2);
+void mostrarMao(int);
+void apresentaMesa();
 
 #endif // VIEW_H_INCLUDED

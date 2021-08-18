@@ -9,7 +9,7 @@
 void opcoesMenu()
 {
     int escolha,SimNao[3],jogo;
-    int lado1,lado2,mao1,mao2,peca1,peca2;
+    int lado1,lado2,mao1,mao2,peca1,peca2,jogador;
     char status;
 
     while(escolha != 6)
@@ -34,20 +34,20 @@ void opcoesMenu()
 
         case 1: embaralhaPeca(pecasDomino,aux);
                 mostraPecas();
-
-                jogo = 1;
-
-                if(jogo == 1)
+                comprar();
+                jogador=definircomeco();
+                printf("%d",jogador);
+                jogador=1;
+                while(jogador<=3)
                 {
-                    comprar();
-                    mostrarMao1();
-                    mostrarMao2();
+                    apresentaMesa();
+                    mostrarMao(jogador);
+                    jogador++;
+
                 }
 
-                peca1 = jogar1(peca1);
-                peca2 = jogar2(peca2);
 
-                apresentaMesa(peca1,peca2);
+
 
                 break;
 

@@ -85,37 +85,30 @@ void qualOpcao()
     printf("\nQual opcao voce deseja fazer: nao embaralhas(0) ou embaralhar(1), para caso queira voltar ao menu digite(2)\n");
 }
 
-void mostrarMao1()
+void mostrarMao(int jogador)
 {
     int i;
-    printf("\nMao jogador 1:\n");
-
-    for(i=1;i<=7;i++)
+    printf("=============\n");
+    printf("  JOGADOR %d  ",jogador);
+    printf("\n=============\n");
+    for(i=1;i<=28;i++)
     {
-        printf("|%d/%d| ",pecasDomino[i].mao1,pecasDomino[i].mao11);
-        printf("Status da peca :%d\n",pecasDomino[i].status);
+        if(pecasDomino[i].status==jogador)
+        {
+            printf("|%d/%d|  ",pecasDomino[i].lado1,pecasDomino[i].lado2);
+            printf("Status da peca :%d\n",pecasDomino[i].status);
+        }
     }
 
     printf("\n\n");
 }
 
-void mostrarMao2()
+
+
+void apresentaMesa()
 {
-    int j;
-
-    printf("\nMao jogador 2:\n");
-
-    for(j=1;j<8;j++)
+    for(int cont;cont<=28;cont++)
     {
-        printf("|%d/%d| ",pecasDomino[j].mao2,pecasDomino[j].mao22);
-        printf("Status da peca :%d\n",pecasDomino[j+7].status);
+        printf("|%d/%d|  "),pecasDomino[cont].mesaesquerda,pecasDomino[cont].mesadireita;
     }
-    printf("\n\n");
-}
-
-void apresentaMesa(int peca1,int peca2)
-{
-    printf("|%d/%d|",pecasDomino[peca1].mao1,pecasDomino[peca1].mao11);
-
-    printf("|%d/%d|",pecasDomino[peca2].mao2,pecasDomino[peca2].mao22);
 }

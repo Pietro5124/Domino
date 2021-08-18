@@ -9,7 +9,7 @@ typedef struct peca{
 
     int lado1,lado2;
     int status;
-    int mao1esquerdo,mao1direito,mao2esquerdo,mao2direito;
+    int mesaesquerda, mesadireita;
 
 }pecas;
 
@@ -28,6 +28,8 @@ void defineLados();
 void embaralhaPeca(pecas pecasDomino[],pecas aux[]);
 int opcoesEmbaralhaOuArrumar(int SimNao[]);
 void comprar();
+void decideJogadores();
+int definircomeco();
 int jogar1(int peca1);
 int jogar2(int peca2);
 
