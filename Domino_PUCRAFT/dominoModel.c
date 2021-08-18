@@ -99,3 +99,10 @@ int jogar2(int peca2)
 
     return peca2;
 }
+
+void decideJogadores()
+{
+    printf("Quantos jogadores você gostaria de incluir?\n");
+
+}
+

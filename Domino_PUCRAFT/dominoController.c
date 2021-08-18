@@ -24,6 +24,7 @@ void opcoesMenu()
 	case 1://usar fout=fopen("data.txt","w"); para criar um txt que simboliza o save
 
         defineLados();
+        decideJogadores();
         opcoesEmbaralhaOuArrumar(SimNao);
 
 	    switch(SimNao[0])

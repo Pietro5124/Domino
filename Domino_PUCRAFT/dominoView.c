@@ -10,9 +10,9 @@ void mostraPecas()
 {
     int l;
 
-    for(int l=1;l<=28;l++)
+    for(l=1;l<=28;l++)
     {
-    printf("|%d/%d| ",pecasDomino[l].lado1,pecasDomino[l].lado2);
+    printf("|%d/%d| ", pecasDomino[l].lado1, pecasDomino[l].lado2);
     printf("Status da peca :%d\n",pecasDomino[l].status);
     }
     printf("\n");
