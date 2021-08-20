@@ -56,6 +56,7 @@ void distribuirPeca()
         if(i<=7)
         {
             pecasDomino[i].status = 1;
+
         }
         if(i>=8 && i<=14)
         {
@@ -85,7 +86,7 @@ int definirComeco()
         mesa[1].ladoE = pecasDomino[maior].lado1;
         mesa[1].ladoD = pecasDomino[maior].lado2;
 
-        mesa[1].numeroDePecas = 1;
+        mesa[0].numeroDePecas = 1;
 
         aux = pecasDomino[maior].status;
 
@@ -94,15 +95,38 @@ int definirComeco()
         return(aux);
 }
 
+int troca(int aux)
+{
+   if(aux == 1)
+    {
+        aux = 2;
+    }else
+    {
+        aux = 1;
+    }
+
+    return aux;
+}
+
 void jogar(int jogador)
 {
-    int peca;
+    int peca,i[1],j=1;
+    int aux[30];
 
     scanf("%d",&peca);
 
-    pecasDomino[peca].status = 4;
+    for(i[0]=1;i[0]<=28;i[0]++)
+    {
+        if(pecasDomino[i[0]].status==jogador)
+        {
+            aux[j] = i[0];
+            j++;
+        }
+    }
 
-    mesa[1].numeroDePecas++;
+    pecasDomino[aux[peca]].status = 4;
+
+    aux[j] = mesa[0].numeroDePecas++;
 
     return;
 }

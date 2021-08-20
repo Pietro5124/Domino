@@ -33,6 +33,7 @@ void decideJogadores();
 int definirComeco();
 void jogar(int);
 void passar();
+int troca(int);
 
 
 #endif // MODEL_H_INCLUDED

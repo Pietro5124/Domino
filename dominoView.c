@@ -105,9 +105,9 @@ void mostrarMao(int jogador)
 
 void apresentaMesa()
 {
-    for(int cont=1;cont<=mesa[cont].numeroDePecas;cont++)
+    for(int cont=1;cont<=mesa[0].numeroDePecas;cont++)
     {
-        printf("|%d/%d| ",mesa[cont].ladoE,mesa[cont].ladoE);
+        printf("|%d/%d| ",pecasDomino[cont].lado1,pecasDomino[cont].lado2);
     }
 
     printf("\n\n");

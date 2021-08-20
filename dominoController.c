@@ -24,7 +24,7 @@ void opcoesMenu()
 	case 1://usar fout=fopen("data.txt","w"); para criar um txt que simboliza o save
 
         defineLados();
-        decideJogadores();
+        //decideJogadores();
         opcoesEmbaralhaOuArrumar(SimNao);
 
 	    switch(SimNao[0])
@@ -39,7 +39,9 @@ void opcoesMenu()
                 jogador=definirComeco();
                 printf("\n|Jogador que ira iniciar sera :%d| \n\n",jogador);
 
-                while(jogador <= 2)
+                jogador = troca(jogador);
+
+                while(jogador != 5)
                 {
                     apresentaMesa();
                     mostrarMao(jogador);
@@ -49,6 +51,15 @@ void opcoesMenu()
                     switch(opcao[0])
                     {
                         case 1: jogar(jogador);
+
+                                if(jogador == 1)
+                                {
+                                    jogador = 2;
+                                }else if(jogador == 2)
+                                {
+                                    jogador = 1;
+                                }
+
                                 break;
 
                         case 2: comprar();
@@ -57,10 +68,10 @@ void opcoesMenu()
                         case 3: passar();
                                 break;
 
-                        case 4: escolha = 8;
+                        case 4: jogador = 5;
+                                escolha = 8;
+                                break;
                     }
-
-                    jogador++;
                 }
 
                 break;
