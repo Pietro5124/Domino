@@ -3,13 +3,14 @@ project(Domino)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(Domino_PUCRAFT)
+include_directories(PUCRAFT)
 
 add_executable(Domino
-        Domino_PUCRAFT/dominoController.c
-        Domino_PUCRAFT/dominoController.h
-        Domino_PUCRAFT/dominoModel.c
-        Domino_PUCRAFT/dominoModel.h
-        Domino_PUCRAFT/dominoView.c
-        Domino_PUCRAFT/dominoView.h
-        Domino_PUCRAFT/Domino.c)
+        PUCRAFT/Dom_PUCRAFT_View.c
+        PUCRAFT/Dom_PUCRAFT_View.h
+        PUCRAFT/Dom_PUCRAFT_Model.c
+        PUCRAFT/Dom_PUCRAFT_Model.h
+        PUCRAFT/Dom_PUCRAFT_Controller.c
+        PUCRAFT/Dom_PUCRAFT_Controller.h
+        PUCRAFT/Dom_PUCRAFT.c
+        )
